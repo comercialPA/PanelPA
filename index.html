@@ -2,18 +2,47 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#05080d">
   <title>Perla Andina</title>
-  <script>
-    location.replace('https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec');
-  </script>
-  <style>html,body{margin:0;background:#fff;font-family:system-ui,sans-serif}main{padding:24px}</style>
+  <style>
+    *{box-sizing:border-box}
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#05080d;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    #app{position:fixed;inset:0;width:100%;height:100%;border:0;background:#fff;display:block}
+    #loading{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;background:#05080d;color:#eef6ff;transition:opacity .35s ease,visibility .35s ease}
+    #loading.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .box{text-align:center;padding:24px}
+    .title{font-size:18px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .sub{margin-top:8px;font-size:12px;color:#8fa3b8}
+    .dot{display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#22d3ee;box-shadow:0 0 14px rgba(34,211,238,.9);animation:pulse 1.1s ease-in-out infinite}
+    @keyframes pulse{50%{opacity:.3;transform:scale(.75)}}
+  </style>
 </head>
 <body>
-<main>
-  <p>Abrindo Perla Andina…</p>
-  <p><a href="https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec">Abrir aplicativo</a></p>
-</main>
+  <div id="loading" aria-live="polite">
+    <div class="box">
+      <div class="title"><span class="dot"></span>Perla Andina</div>
+      <div class="sub">Carregando sistema...</div>
+    </div>
+  </div>
+
+  <iframe
+    id="app"
+    title="Perla Andina"
+    src="https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec"
+    loading="eager"
+    allow="clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    (function(){
+      var frame=document.getElementById('app');
+      var loading=document.getElementById('loading');
+      frame.addEventListener('load',function(){
+        setTimeout(function(){ loading.classList.add('hide'); },250);
+      });
+    })();
+  </script>
 </body>
 </html>
