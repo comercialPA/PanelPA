@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#05080d">
+  <meta name="perla-build" content="V5.5.6 - perla andina">
   <title>Perla Andina</title>
   <style>
     *{box-sizing:border-box}
@@ -25,7 +26,6 @@
       <div class="sub">Carregando sistema...</div>
     </div>
   </div>
-
   <iframe
     id="app"
     title="Perla Andina"
@@ -34,13 +34,12 @@
     allow="clipboard-read; clipboard-write"
     allowfullscreen>
   </iframe>
-
   <script>
     (function(){
       var frame=document.getElementById('app');
       var loading=document.getElementById('loading');
       frame.addEventListener('load',function(){
-        setTimeout(function(){ loading.classList.add('hide'); },250);
+        setTimeout(function(){loading.classList.add('hide');},250);
       });
     })();
   </script>
