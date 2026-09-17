@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec",
+      "permanent": false
+    },
+    {
+      "source": "/app",
+      "destination": "https://script.google.com/macros/s/AKfycbzqFoUQ_nC4uiXOZCLnGtOWofJbjydUlEFaO6aEoDmJUdzVM8Q8p3pfWo8Xveem08JKBw/exec",
+      "permanent": false
+    }
+  ]
+}
